@@ -1,0 +1,15 @@
+{
+  "name": "vovo-bala-tensa-bot",
+  "version": "1.0.0",
+  "description": "Bot de Discord humoristico que da desculpas no estilo Vovo Bala Tensa",
+  "main": "index.js",
+  "type": "commonjs",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.32.1",
+    "discord.js": "^14.16.3",
+    "dotenv": "^16.4.5"
+  }
+}
