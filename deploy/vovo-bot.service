@@ -1,0 +1,19 @@
+[Unit]
+Description=Vovo Bala Tensa - Discord bot
+# Espera a rede estar realmente pronta antes de conectar no gateway do Discord
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=ubuntu
+WorkingDirectory=/home/ubuntu/chat_tio
+# dotenv carrega o .env a partir do WorkingDirectory acima
+ExecStart=/usr/bin/node index.js
+Restart=always
+RestartSec=5
+# Limite de memoria opcional (o bot usa bem menos que isso)
+MemoryMax=300M
+
+[Install]
+WantedBy=multi-user.target
